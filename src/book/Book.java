@@ -30,9 +30,9 @@ public class Book {
 // Purpose: Initialize variables to parameters passed to the function
 // Parameters: the name of the object and its coordinates
 // Returns: none
-    public Book(String title, String athuor, String description, String type, boolean in) {
+    public Book(String title, String author, String description, String type, boolean in) {
         this.title = title;
-        this.author = athuor;
+        this.author = author;
         this.description = description;
         this.type = type;
         this.in = in;

@@ -1,0 +1,6 @@
+aaa,Child,0,aaa,aaa,aaa,aaa,Alabama ,aaa
+bbb,Child,0,bbb,bbb,bbb,bbb,Alabama ,bbb
+ccc,Adult,0,ccc,ccc,ccc,ccc,California ,ccc
+ddd,Child,0,ddd,ddd,ddd,ddd,Arizona ,ddd
+aaa,Child,0,801bbb,22321north,,provo,Arizona ,84062
+scott,Child,1,8015468795,22n  44w,,provo,Alabama ,84058

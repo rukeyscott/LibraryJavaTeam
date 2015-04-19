@@ -33,9 +33,8 @@ public class WriteDatabaseTest {
     @Test
     public void testWriteDatabase() {
         System.out.println("writeDatabase");
-        String s = "B" + ",=" + "Holy War" + ",=" + "bob jones" + ",=" + 
-                "a crappy book" + ",=" + "Adult" + ",=" + "yes" + ",=" + "222";;
-        String t = "Book";
+        String s = "Scott Purcell,8016233388,2322 North 1500 West,,Pleasant Grove,84062";
+        String t = "Patron";
         WriteDatabase.writeDatabase(s, t);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

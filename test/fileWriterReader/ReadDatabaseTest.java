@@ -32,7 +32,7 @@ public class ReadDatabaseTest {
      */
     @Test
     public void testReadDatabase() throws Exception {
-        String t = "Patrons";
+        String t = "Patron";
         System.out.println("reading the Database: "+ t);
         ReadDatabase.readDatabase(t);
     

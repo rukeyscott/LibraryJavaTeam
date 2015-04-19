@@ -1,5 +1,6 @@
 package patronpackage;
 
+import fileWriterReader.WriteDatabase;
 import libarypackage.Libary;
 
 
@@ -13,6 +14,8 @@ public class PatronNew extends javax.swing.JInternalFrame {//this code controls 
      * Creates new form PatronNew
      * @param own
      */
+    WriteDatabase write; 
+    int patronId=1;
     public PatronNew(Libary own) {
         initComponents();
         owner=own;
@@ -163,6 +166,12 @@ public class PatronNew extends javax.swing.JInternalFrame {//this code controls 
                             city.getText(), (String) state.getSelectedItem(),
                             zip.getText());
         owner.addPatron(p);
+  //************************************** write to database**********************************************************
+        write.writeDatabase(("P" + ",="+ name.getText()+","+(String)type.getSelectedItem()+","+patronId+","+
+                            phone.getText()+","+ adl1.getText()+","+ adl2.getText()+","+
+                            city.getText()+","+ (String) state.getSelectedItem()+","+
+                            zip.getText()),"Patron");patronId++;
+//*************************************************************************************************
         clear(evt);
     }//GEN-LAST:event_addActionPerformed
 

@@ -1,5 +1,6 @@
 package book;
 
+import fileWriterReader.WriteDatabase;
 import libarypackage.Libary;
 
 /*
@@ -18,9 +19,12 @@ public class BookNew extends javax.swing.JInternalFrame {
      * Creates new form BookNew
      * @param own
      */
+     WriteDatabase write; 
+     int id=200;
     public BookNew(Libary own) {
         initComponents();
         owner=own;
+      
     }
 
     /**
@@ -134,6 +138,11 @@ public class BookNew extends javax.swing.JInternalFrame {
                         description.getText(),
                         (String)type.getSelectedItem(),true);
         owner.addbook(b);
+ //************************************** write to database**********************************************************
+        write.writeDatabase(("B" + ",=" + title.getText() + ",=" + author.getText() + ",=" + description.getText() + 
+                ",=" + (String)type.getSelectedItem() + ",=" + true + ",=" + id),"Book");
+        id++;
+ //************************************** write to database**********************************************************
         clear(evt);
     }//GEN-LAST:event_addActionPerformed
 

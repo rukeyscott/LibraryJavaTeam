@@ -17,7 +17,7 @@ import java.io.IOException;
 public class WriteDatabase{
     public static void writeDatabase(String s,String t) {
         
-        //t = filename and s= string being written
+        //t = filename and s= string being written- may need to make this the corresponding array that is passed in then printed into the file
       BufferedWriter bw = null;
       try {
 	 String mycontent = s;
@@ -31,9 +31,10 @@ public class WriteDatabase{
 	     file.createNewFile();
 	  }
 
-	  FileWriter fw = new FileWriter(file);
+	  FileWriter fw = new FileWriter(file,true);
 	  bw = new BufferedWriter(fw);
 	  bw.write(mycontent);
+          bw.newLine();
           System.out.println("File written Successfully");
 
       } catch (IOException ioe) {
